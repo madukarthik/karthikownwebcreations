@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>JavaScript</title>
+<style>
+.form{
+border:5px solid rgb(57, 4, 73);
+margin-left:35%;
+margin-top:15%;
+bottumpadding:12px;
+background-color: rgb(235, 189, 65);
+}
+.back
+{
+    background-image:linear-gradient(yellow,rgb(26, 196, 196));
+}
+.button{
+border:2px solid navy;
+margin-left:40%;
+background-color:rgb(94, 224, 214);
+font-size:15px;
+padding:2%;
+margin-top:10%;
+}
+button:hover{
+opacity:0.8;
+}
+.log
+{
+margin:15%;
+}
+.avatar
+{
+width:20%;
+length=30%;
+border-radius:60%;
+margin-left:40%;
+background-color: brown;
+}
+.Dropdown{
+color:black;
+display:none;
+position:absolute;
+min-width:160px;
+z-index/:1;
+background-color:white;
+font-size:20px;
+}
+.Dropdowncontent{
+position:relative;
+display=inline-block;
+}
+.show{display:block;}
+.th{
+margin-left:980px;
+margin-top:50px;
+margin-buttom:0px;
+background-color:black;
+color:white;
+}
+</style>
+<script >
+function getSubmit()
+{
+ var Username = document.getElementById("Username").value="Saved";
+ var password = document.getElementById("password").value="Saved";
+}
+function myFunction()
+{
+document.getElementById("mydrop").classList.toggle("show");
+}
+function myClick()
+{
+document.getElementById("id01").style.backgroundColor="black";
+}
+</script>
+</head>
+<body class="back" id="id01">
+<div class="Dropdowncontent">
+<button class="dropbtn" onclick="myFunction()" ><b>MENU</b></button>
+<div class="Dropdown" id="mydrop">
+<div><b>Userlogin</b></div>
+<div><b>Folder</b></div>
+<div><b>Employeelogin</b></div>
+</div>
+</div>
+<table class="form">
+<caption style="color:red;font-size:30px"><b>Login Form</b></caption>
+<tr><td colspan="2"><img src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="avatar" class="avatar"></td></tr>
+<tr>
+<td><b>UserName</b></td>
+<td> <input type="text" placeholder="Enter the username" name="Username" id="Username" onblur="userNameLogin" required /></td>
+</tr>
+<tr>
+<td><b>Password</b></td>
+<td> <input type="text" placeholder="Enter all characters" name="password" id="password" required /></td>
+</tr>
+<tr>
+<td colspan="3"><button class="button" onclick="getSubmit()"><b>Submit</b></button></td>
+</tr>
+</table>
+</body>
+</html>
