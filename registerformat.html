@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body{
+            background:url("https://www.tallengestore.com/cdn/shop/products/StarkMountain-AnselAdams-AmericanLandscapePhotograph_8b374418-00df-4af0-ab2f-1603976a1234.jpg?v=1636028015");
+            align-content: center;
+            position: absolute;
+            background-size: cover;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .head a{
+            color: rgb(163, 55, 82);
+            font-size: 20px;
+            justify-content: space-around;
+            text-decoration: none;
+            margin-left: 20px;
+            align-content: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .head a::after{
+            content: "";
+            background-color: rgb(163, 55, 82);
+            width: 100%;
+            height: 2px;
+            left: 0;
+            position: absolute;
+            transform: scale(0);
+            transition: transform.5s;
+            bottom: -6px;
+        }
+        .head a:hover::after{
+            transform: scale(1);
+        }
+        .form{
+            background-color: rgba(29, 27, 27, 0.623);
+            border-radius: 8px;
+            border: 3px solid black;
+            height: 380px;
+            width: 320px;
+            margin-left: 150%;
+            margin-top: 30%;
+        }
+        .abtn{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .abtn button{
+            border-radius: 20px;
+            background-color: orange;
+            font-size: 15px;
+            margin-top: 10px;
+            width: 100px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .abtn button:hover{
+            background-color: antiquewhite;
+            color: orange;
+        }
+        .abtn button.btn{
+            background-color: white;
+        }
+        .reg{
+        margin-left: 30%;
+        background: transparent;
+        font-size: 20px;
+        color: rgb(235, 190, 132);
+       }
+       .inputfield{
+            background: transparent;
+            border: none;
+            color: rgb(193, 196, 14);
+            display: inline-flex;
+            width:85%;
+            padding: 5px;
+            margin-left: 9px;
+            border-bottom: 2px solid orange;
+            max-height: 60px;
+            overflow: hidden;
+        }
+       .input i{
+        color: rgb(184, 130, 59);
+        margin-top: 2%;
+        margin-left: 5%;
+        max-height: 60px;
+        overflow: hidden;
+       }
+       .rem{
+        color: orange;
+        margin-top: 9px;
+       }
+       .sbtn{
+        margin-left: 80px;
+        margin-top: 20px;
+        padding: 7px;
+        background-color: orange;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        width:160px
+       }
+       .sbtn:hover{
+        background-color: antiquewhite;
+        color: orange;
+        opacity: 0.1px;
+       }
+    </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="head">
+              <a href="#">Home</a>
+              <a href="#">Info</a>
+              <a href="#">Details</a>
+              <a href="#">Contact</a>
+            </nav>
+        </header>
+        <div class="form">
+              <div class="abtn" id="button">
+                <button  id="Register">Register</button>
+                <button class="btn" id="Login">Sign In</button>
+              </div>
+            <form class="input-group">
+                <h2 class="reg" id="title">Register</h2>
+                <div class="input">
+                 <i class="fa-solid fa-envelope"></i>
+                 <input type="text" class="inputfield" placeholder="Enter the mail">
+                </div>
+                <div class="input" id="name">
+                 <i class="fa-solid fa-user" id="profile" ></i>
+                 <input type="text" class="inputfield" placeholder="Enter the name">
+                </div>
+                <div class="input">
+                 <i class="fa-solid fa-key"></i>
+                 <input type="text" class="inputfield" placeholder="Enter the password">
+                </div>
+                <div class="rem"><input type="checkbox">Remember me
+                    <div>Agree Term's and Conditions</div>
+                </div>
+                <button class="sbtn" id="Submit" >Submit</button>
+            </form>
+        </div>
+        <script>
+            let Register = document.getElementById("Register");
+            let Login = document.getElementById("Login");
+            let name = document.getElementById("name");
+            let title = document.getElementById("title"); 
+            
+            Login.onclick=function(){
+                name.style.maxHeight = "0";
+                title.innerHTML ="Sign In";
+                Login.classList.remove("btn");
+                Register.classList.add("btn");
+            }
+            Register.onclick=function(){
+                name.style.maxHeight = "60px";
+                title.innerHTML ="Register";
+                Login.classList.add("btn");
+                Register.classList.remove("btn");
+            }
+           
+        </script>
+    </body>
+</html>
